@@ -1,0 +1,86 @@
+
+===== Qwen/Qwen2.5-32B-Instruct  devforms  -> /workspace/rl/runs/big_forms_32b.jsonl =====
+512 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.8.0+cu128",
+  "python": "3.11.13",
+  "gpu": "NVIDIA A100 80GB PCIe"
+}
+first batch of 8 in 1.6s
+scored 512 in 81.5s (0.159 s/episode), peak GPU 67.67 GB
+BENCHMARK LINE: 0.1592 s/episode, 67.67 GB peak, NVIDIA A100 80GB PCIe, batch 8
+
+wall 148.8s
+
+===== Qwen/Qwen2.5-32B-Instruct  devattrib  -> /workspace/rl/runs/big_attrib_32b.jsonl =====
+768 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.8.0+cu128",
+  "python": "3.11.13",
+  "gpu": "NVIDIA A100 80GB PCIe"
+}
+first batch of 8 in 1.5s
+scored 768 in 111.6s (0.145 s/episode), peak GPU 67.53 GB
+BENCHMARK LINE: 0.1453 s/episode, 67.53 GB peak, NVIDIA A100 80GB PCIe, batch 8
+
+wall 128.7s
+
+===== Qwen/Qwen2.5-72B-Instruct  devforms  -> /workspace/rl/runs/big_forms_72b.jsonl =====
+512 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-72B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.8.0+cu128",
+  "python": "3.11.13",
+  "gpu": "NVIDIA A100 80GB PCIe"
+}
+first batch of 8 in 3.1s
+scored 512 in 176.0s (0.344 s/episode), peak GPU 72.68 GB
+BENCHMARK LINE: 0.3437 s/episode, 72.68 GB peak, NVIDIA A100 80GB PCIe, batch 8
+
+wall 423.1s
+
+===== Qwen/Qwen2.5-72B-Instruct  devattrib  -> /workspace/rl/runs/big_attrib_72b.jsonl =====
+768 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-72B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.8.0+cu128",
+  "python": "3.11.13",
+  "gpu": "NVIDIA A100 80GB PCIe"
+}
+first batch of 8 in 3.0s
+scored 768 in 241.5s (0.314 s/episode), peak GPU 72.57 GB
+BENCHMARK LINE: 0.3144 s/episode, 72.57 GB peak, NVIDIA A100 80GB PCIe, batch 8
+
+wall 271.7s
+
+ALL DONE

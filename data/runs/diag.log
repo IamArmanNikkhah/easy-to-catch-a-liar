@@ -1,0 +1,44 @@
+
+===== Qwen/Qwen2.5-32B-Instruct -> /workspace/rl/runs/diag_restated_32b.jsonl =====
+256 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.8.0+cu128",
+  "python": "3.11.13",
+  "gpu": "NVIDIA A100 80GB PCIe"
+}
+first batch of 8 in 1.5s
+scored 256 in 38.9s (0.152 s/episode), peak GPU 67.57 GB
+BENCHMARK LINE: 0.1521 s/episode, 67.57 GB peak, NVIDIA A100 80GB PCIe, batch 8
+
+wall 105.1s
+
+===== Qwen/Qwen2.5-72B-Instruct -> /workspace/rl/runs/diag_restated_72b.jsonl =====
+256 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-72B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.8.0+cu128",
+  "python": "3.11.13",
+  "gpu": "NVIDIA A100 80GB PCIe"
+}
+first batch of 8 in 3.0s
+scored 256 in 84.7s (0.331 s/episode), peak GPU 72.60 GB
+BENCHMARK LINE: 0.3310 s/episode, 72.60 GB peak, NVIDIA A100 80GB PCIe, batch 8
+
+wall 337.9s
+
+ALL DONE

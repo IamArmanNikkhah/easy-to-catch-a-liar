@@ -1,0 +1,11 @@
+watch start Sun Sep 13 00:12:40 CDT 2026
+DONE seen Sun Sep 13 00:53:25 CDT 2026
+rows    10240
+scored 10240 in 2574.5s (0.251 s/episode), peak GPU 72.84 GB
+BENCHMARK LINE: 0.2514 s/episode, 72.84 GB peak, NVIDIA RTX PRO 6000 Blackwell Server Edition, batch 8
+destroying instance 50848640.
+instances after destroy: 0
+ "billing_creditonly": 1,
+ "credit": 18.794037583320012,
+ "got_signup_credit": 0,
+watch end Sun Sep 13 00:53:47 CDT 2026

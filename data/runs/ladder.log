@@ -1,0 +1,86 @@
+
+===== Qwen/Qwen2.5-0.5B-Instruct -> /content/rl/data/runs/ladder_0.5b.jsonl =====
+512 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.11.0+cu128",
+  "python": "3.13.15",
+  "gpu": "NVIDIA L4"
+}
+first batch of 8 in 1.3s
+scored 512 in 8.3s (0.016 s/episode), peak GPU 2.17 GB
+BENCHMARK LINE: 0.0162 s/episode, 2.17 GB peak, NVIDIA L4, batch 8
+
+wall 34.0s
+
+===== Qwen/Qwen2.5-1.5B-Instruct -> /content/rl/data/runs/ladder_1.5b.jsonl =====
+512 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.11.0+cu128",
+  "python": "3.13.15",
+  "gpu": "NVIDIA L4"
+}
+first batch of 8 in 0.7s
+scored 512 in 18.0s (0.035 s/episode), peak GPU 4.34 GB
+BENCHMARK LINE: 0.0352 s/episode, 4.34 GB peak, NVIDIA L4, batch 8
+
+wall 42.6s
+
+===== Qwen/Qwen2.5-3B-Instruct -> /content/rl/data/runs/ladder_3b.jsonl =====
+512 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-3B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.11.0+cu128",
+  "python": "3.13.15",
+  "gpu": "NVIDIA L4"
+}
+first batch of 8 in 1.0s
+scored 512 in 34.2s (0.067 s/episode), peak GPU 7.46 GB
+BENCHMARK LINE: 0.0669 s/episode, 7.46 GB peak, NVIDIA L4, batch 8
+
+wall 67.0s
+
+===== Qwen/Qwen2.5-7B-Instruct -> /content/rl/data/runs/ladder_7b.jsonl =====
+512 to score (0 already done)
+{
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "revision": "main",
+  "device": "cuda",
+  "precision": "fp16",
+  "chat_template": true,
+  "batch_size": 8,
+  "seed": 0,
+  "transformers": "5.16.1",
+  "torch": "2.11.0+cu128",
+  "python": "3.13.15",
+  "gpu": "NVIDIA L4"
+}
+first batch of 8 in 1.6s
+scored 512 in 76.3s (0.149 s/episode), peak GPU 16.61 GB
+BENCHMARK LINE: 0.1490 s/episode, 16.61 GB peak, NVIDIA L4, batch 8
+
+wall 136.5s
+
+ALL DONE

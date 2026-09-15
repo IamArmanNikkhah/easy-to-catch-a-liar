@@ -1,0 +1,53 @@
+Llama-3.1-8B: 10240 of 10240 items scored
+
+ACCURACY BY CELL, each variant beside the floor for the same question.
+A ceiling is only readable if its floor cleared; `world` is the research question.
+
+  SOURCE question
+    floor     stab 0.719  worl 0.613  repo 0.586  both 0.562   | all 0.620 [0.594, 0.646] n=1024
+    ceiling   stab 0.707  worl 0.684  repo 0.555  both 0.535   | all 0.620 [0.592, 0.648] n=1024
+    cal       stab 0.613  worl 0.598  repo 0.426  both 0.422   | all 0.515 [0.508, 0.522] n=1024
+    cal_prior  stab 0.645  worl 0.633  repo 0.395  both 0.398   | all 0.518 [0.509, 0.527] n=1024
+
+  WINNER question
+    floor     stab 0.773  worl 0.770  repo 0.785  both 0.785   | all 0.778 [0.749, 0.809] n=1024
+    ceiling   stab 0.617  worl 0.605  repo 0.402  both 0.387   | all 0.503 [0.490, 0.516] n=1024
+    cal       stab 0.625  worl 0.590  repo 0.426  both 0.402   | all 0.511 [0.500, 0.521] n=1024
+    cal_prior  stab 0.594  worl 0.578  repo 0.418  both 0.418   | all 0.502 [0.495, 0.508] n=1024
+
+STOPPING RULE: a calibrated arm may not outscore its own ceiling.
+  source cal 0.515 vs ceiling 0.620  ok
+  winner cal 0.511 vs ceiling 0.503  *** VOID, something leaks ***
+
+  Run is void. Do not read anything below.
+
+DIFFERENCE IN DIFFERENCES, each arm against its own no-evidence baseline.
+Removes the answer-alphabet difference between the arms. PRIMARY ESTIMATOR.
+  source cal 0.515  nocal-baseline 0.561  delta -0.046
+  winner cal 0.511  nocal-baseline 0.500  delta +0.011
+  DISSOCIATION (source delta minus winner delta): -0.057
+
+ITEM-CONDITIONAL, on byte-matched pairs only. This is the claim-bearing number.
+  P(winner right | source right)  stable  0.662 [0.586, 0.739] n=157
+  P(winner right | source right)  world   0.601 [0.519, 0.684] n=153
+  P(winner right | source right)  reporter 0.450 [0.347, 0.561] n=109
+  P(winner right | source right)  both    0.444 [0.340, 0.549] n=108
+  P(winner right | source right)  ALL     0.556 [0.501, 0.611] n=527
+
+NO-EVIDENCE ITEMS: is the model reading evidence it does not have?
+The marginal is the old control and it passes a deterministic heuristic at 0.500.
+  says FLIPPED when reports DO flip: 0.445 [0.414, 0.477] n=512
+  says FLIPPED when reports do NOT flip: 0.434 [0.402, 0.465] n=512
+  (old marginal, says 'accurate': 0.561 [0.529, 0.592] n=1024)
+
+WHAT THE CALIBRATED ANSWERS TRACK (required when the no-evidence items separate).
+  source cal agrees with the flip heuristic: 0.505 [0.496, 0.514] n=1024
+  (a pure heuristic would score 0.500 accuracy; agreement near 0.5 means the
+   calibrated answers are not the heuristic wearing a better score)
+  winner ceiling   picks the REPORTED winner:  stab 0.617  worl 0.605  repo 0.598  both 0.613  ALL 0.608
+  winner cal       picks the REPORTED winner:  stab 0.625  worl 0.590  repo 0.574  both 0.598  ALL 0.597
+  winner cal_prior picks the REPORTED winner:  stab 0.594  worl 0.578  repo 0.582  both 0.582  ALL 0.584
+
+ROUND MODERATOR: which post-change round the verified record names.
+  source  round 5 0.523  round 6 0.506
+  winner  round 5 0.514  round 6 0.508

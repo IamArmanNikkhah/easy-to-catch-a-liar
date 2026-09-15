@@ -1,0 +1,36 @@
+watch start Sun Sep 13 23:36:58 CDT 2026
+23:37 rows/tracebacks: 0 0
+23:38 rows/tracebacks: 0 0
+23:39 rows/tracebacks: 0 0
+23:40 rows/tracebacks: 0 0
+23:41 rows/tracebacks: 0 0
+23:42 rows/tracebacks: 0 0
+23:43 rows/tracebacks: 0 0
+23:44 rows/tracebacks: 0 0
+23:45 rows/tracebacks: 0 0
+23:46 rows/tracebacks: 0 0
+23:47 rows/tracebacks: 0 0
+23:48 rows/tracebacks: 0 0
+23:49 rows/tracebacks: 0 0
+23:50 rows/tracebacks: 0 0
+23:51 rows/tracebacks: 0 0
+23:52 rows/tracebacks: 0 0
+23:53 rows/tracebacks: 0 0
+23:54 rows/tracebacks: 56 0
+23:55 rows/tracebacks: 400 0
+23:56 rows/tracebacks: 728 0
+23:57 rows/tracebacks: 1064 0
+23:58 rows/tracebacks: 1392 0
+23:59 rows/tracebacks: 1728 0
+00:00 rows/tracebacks: 2056 0
+00:01 rows/tracebacks: 2384 0
+00:02 rows/tracebacks: 2720 0
+00:03 rows/tracebacks: 3048 0
+00:04 rows/tracebacks: 3072 0
+rows     3072
+destroying instance 50975476.
+instances after destroy: 0
+ "billing_creditonly": 1,
+ "credit": 9.807054411820033,
+ "got_signup_credit": 0,
+watch end Mon Sep 14 00:05:11 CDT 2026
