@@ -11,6 +11,11 @@ collapse make opposite predictions here:
 The table prints both margins with paired intervals over worlds. A third possibility, that
 both matter, shows up as both margins excluding zero.
 
+LETTER here is the honest letter's position in the prompt (listed first or second), not its
+pool order, which is what the paper's Table 5 uses (paper_numbers.py, crossed()); the two
+definitions give different letter margins. The resampling unit is the world: a world and its
+swapped copy share the history (unit fixed 2026-10-30; it was world/file before).
+
   python3 analyze_swap.py
 """
 import json, collections, random
@@ -34,7 +39,7 @@ def gather(model):
         for i, k in key.items():
             if k["question"] != "source" or i not in got or k["correct"] is None: continue
             second = labels[i][1] == k["accurate_label"]
-            out.append((k["family_id"] + "/" + tag, k["cell"], k["variant"], k["audit_round"], second, got[i]["choice"] == k["correct"]))
+            out.append((k["family_id"], k["cell"], k["variant"], k["audit_round"], second, got[i]["choice"] == k["correct"]))
     return out
 
 def boot(rows, n=3000, seed=0):

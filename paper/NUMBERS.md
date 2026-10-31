@@ -299,23 +299,24 @@
 ## Letter identity x audited round, crossed over the original and swapped files (source question, calibrated)
 
 Cells are (round the record names) x (honest letter is the earlier or later pool letter); n=128 per cell in the honest situations.
-Margins are paired over worlds: ROUND = round-5 accuracy minus round-6; LETTER = earlier-letter accuracy minus later-letter.
+ROUND = round-5 accuracy minus round-6, which compares worlds (each world has one checked round); LETTER = earlier-letter accuracy minus later-letter, paired within worlds.
+A world and its swapped copy are the same history with the letter line flipped, so they resample together.
 
 ### Qwen2.5-32B
 
 | situation | r5, earlier | r5, later | r6, earlier | r6, later | ROUND margin | LETTER margin |
 |---|---|---|---|---|---|---|
-| nothing moved, honest | 0.953 | 0.992 | 0.734 | 0.734 | +0.238 [+0.176, +0.300] | -0.020 [-0.094, +0.058] |
-| points moved, honest | 0.891 | 0.883 | 0.594 | 0.625 | +0.277 [+0.215, +0.335] | -0.012 [-0.094, +0.063] |
-| nothing moved, lying | 0.930 | 0.938 | 0.938 | 0.938 | -0.004 [-0.041, +0.034] | -0.004 [-0.042, +0.034] |
-| points moved, lying | 0.938 | 0.938 | 0.938 | 0.938 | +0.000 [-0.037, +0.038] | +0.000 [-0.038, +0.039] |
+| nothing moved, honest | 0.953 | 0.992 | 0.734 | 0.734 | +0.238 [+0.158, +0.324] | -0.020 [-0.047, +0.008] |
+| points moved, honest | 0.891 | 0.883 | 0.594 | 0.625 | +0.277 [+0.196, +0.354] | -0.012 [-0.043, +0.020] |
+| nothing moved, lying | 0.930 | 0.938 | 0.938 | 0.938 | -0.004 [-0.057, +0.051] | -0.004 [-0.012, +0.000] |
+| points moved, lying | 0.938 | 0.938 | 0.938 | 0.938 | +0.000 [-0.052, +0.056] | +0.000 [+0.000, +0.000] |
 
 ### Qwen2.5-72B
 
 | situation | r5, earlier | r5, later | r6, earlier | r6, later | ROUND margin | LETTER margin |
 |---|---|---|---|---|---|---|
-| nothing moved, honest | 0.836 | 0.789 | 0.531 | 0.398 | +0.348 [+0.244, +0.458] | +0.090 [-0.034, +0.216] |
-| points moved, honest | 0.648 | 0.547 | 0.352 | 0.188 | +0.328 [+0.203, +0.449] | +0.133 [-0.004, +0.267] |
+| nothing moved, honest | 0.836 | 0.789 | 0.531 | 0.398 | +0.348 [+0.200, +0.498] | +0.090 [+0.055, +0.125] |
+| points moved, honest | 0.648 | 0.547 | 0.352 | 0.188 | +0.328 [+0.159, +0.489] | +0.133 [+0.082, +0.188] |
 | nothing moved, lying | 1.000 | 1.000 | 1.000 | 1.000 | +0.000 [+0.000, +0.000] | +0.000 [+0.000, +0.000] |
 | points moved, lying | 1.000 | 1.000 | 1.000 | 1.000 | +0.000 [+0.000, +0.000] | +0.000 [+0.000, +0.000] |
 
@@ -323,10 +324,10 @@ Margins are paired over worlds: ROUND = round-5 accuracy minus round-6; LETTER =
 
 | situation | r5, earlier | r5, later | r6, earlier | r6, later | ROUND margin | LETTER margin |
 |---|---|---|---|---|---|---|
-| nothing moved, honest | 0.938 | 0.828 | 0.867 | 0.547 | +0.176 [+0.082, +0.267] | +0.215 [+0.127, +0.307] |
-| points moved, honest | 0.742 | 0.539 | 0.742 | 0.305 | +0.117 [-0.013, +0.237] | +0.320 [+0.200, +0.435] |
-| nothing moved, lying | 1.000 | 1.000 | 0.953 | 0.992 | +0.027 [+0.008, +0.051] | -0.020 [-0.043, -0.000] |
-| points moved, lying | 0.992 | 1.000 | 0.945 | 1.000 | +0.023 [+0.003, +0.048] | -0.031 [-0.057, -0.011] |
+| nothing moved, honest | 0.938 | 0.828 | 0.867 | 0.547 | +0.176 [+0.098, +0.254] | +0.215 [+0.125, +0.309] |
+| points moved, honest | 0.742 | 0.539 | 0.742 | 0.305 | +0.117 [+0.001, +0.227] | +0.320 [+0.203, +0.430] |
+| nothing moved, lying | 1.000 | 1.000 | 0.953 | 0.992 | +0.027 [+0.008, +0.050] | -0.020 [-0.043, +0.000] |
+| points moved, lying | 0.992 | 1.000 | 0.945 | 1.000 | +0.023 [+0.002, +0.047] | -0.031 [-0.055, -0.012] |
 
 - swap run cost: $4.54 (two-card box; the 32B leg crashed on a full disk and the box idled) + $0.98 (32B on a one-card box). Total paid across the paper: $13.19.
 

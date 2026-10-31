@@ -17,7 +17,8 @@ from two families, one question with one letter: is the reporter honest or lying
 They catch a lying reporter almost perfectly. They clear an honest reporter far less
 often, and how often depends on which round the record names (Qwen) or which letter
 stands for "honest" (Llama). Every number in the paper is in `paper/NUMBERS.md`, and that
-file regenerates byte for byte from the files here.
+file regenerates byte for byte from the files here. One exception is listed under
+Corrections, at the end.
 
 ## Layout
 
@@ -79,3 +80,16 @@ The paper names them by what happened after round 4. The code uses shorter keys:
 The prompt variants are `cal` (with record), `nocal` (no record), `floor` (answer printed),
 `ceiling` (answer printed plus record), and `cal_prior` (salience). NUMBERS.md uses the code
 keys; the paper uses the names in parentheses.
+
+## Corrections
+
+2026-10-30. The round and letter margins (Table 5 and Table C1 of the paper) resampled each
+original world and its reversed-letter copy as two separate worlds. The two copies share one
+history, so they now resample together (`code/paper_numbers.py`, `crossed()`, and the same
+fix in `code/analyze_swap.py`). Every accuracy and every point estimate is unchanged; only
+those intervals move. The Qwen2.5-72B letter margins, which the paper reports with intervals
+reaching zero, now exclude zero (+0.090 [+0.055, +0.125] and +0.133 [+0.082, +0.188]). `paper/NUMBERS.md` and
+`data/runs/swap_analysis.txt` are regenerated, so the intervals printed in those two tables
+of `paper/paper.pdf` no longer match `NUMBERS.md` until the next version of the paper.
+`analyze_swap.py` measures the letter by its position in the prompt rather than by pool
+order, as Table 5 does, so its letter margins differ from the paper's by design.

@@ -191,7 +191,8 @@ def crossed():
     pool = list(H.LABEL_POOL)
     print("\n## Letter identity x audited round, crossed over the original and swapped files (source question, calibrated)\n")
     print("Cells are (round the record names) x (honest letter is the earlier or later pool letter); n=128 per cell in the honest situations.")
-    print("Margins are paired over worlds: ROUND = round-5 accuracy minus round-6; LETTER = earlier-letter accuracy minus later-letter.\n")
+    print("ROUND = round-5 accuracy minus round-6, which compares worlds (each world has one checked round); LETTER = earlier-letter accuracy minus later-letter, paired within worlds.")
+    print("A world and its swapped copy are the same history with the letter line flipped, so they resample together.\n")
     for name, orig, swap in (("Qwen2.5-32B", "paired_32b", "swap_qwen32b"), ("Qwen2.5-72B", "paired_72b", "swap_qwen72b"),
                              ("Llama-3.1-70B", "paired_llama70b", "swap_llama70b")):
         rows = []
@@ -202,7 +203,8 @@ def crossed():
             for i, k in key.items():
                 if k["question"] != "source" or k["variant"] != "cal" or i not in got: continue
                 other = [x for x in labs[i] if x != k["accurate_label"]][0]
-                rows.append((k["family_id"] + "/" + tag, k["cell"], k["audit_round"],
+                # unit is the world, not world/file: the swapped copy shares the history (fixed 2026-10-30)
+                rows.append((k["family_id"], k["cell"], k["audit_round"],
                              pool.index(k["accurate_label"]) > pool.index(other), got[i]["choice"] == k["correct"]))
         print("### %s\n" % name)
         print("| situation | r5, earlier | r5, later | r6, earlier | r6, later | ROUND margin | LETTER margin |")
